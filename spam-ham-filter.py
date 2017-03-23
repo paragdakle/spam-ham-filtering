@@ -233,7 +233,6 @@ def main(args):
     featureSelectionCount = int(args[6])
     data = loadData(args[1])
     vocabulary = buildVocabulary(data, [])
-    """
     prior, conditionalProbabilities = trainBN(data, vocabulary)
     print "Naive Bayes Accuracy with Stop Words : ", testBN(args[2], vocabulary, prior, conditionalProbabilities)
     weights = trainMCAPLogisticRegression(data, vocabulary, iterations, eta, lamda)
@@ -244,7 +243,6 @@ def main(args):
     print "Naive Bayes Accuracy without Stop Words : ", testBN(args[2], restrictedVocabulary, prior, conditionalProbabilities)
     weights = trainMCAPLogisticRegression(data, restrictedVocabulary, iterations, eta, lamda)
     print "Logistic Regression Accuracy with Stop Words : ", testMCAPLogisticRegression(args[2], weights)
-    """
     reducedVocabulary = featureSelection(data, vocabulary)
     prior, conditionalProbabilities = trainBN(data, reducedVocabulary)
     print "Naive Bayes Accuracy with Feature Selection : ", testBN(args[2], reducedVocabulary, prior, conditionalProbabilities)
