@@ -4,9 +4,7 @@ import math
 import operator
 
 """
-Homework 2 Submission.
 Author: Parag Pravin Dakle.
-NetID: pxd160530.
 Course: Advanced Machine Learning.
 """
 
@@ -242,7 +240,7 @@ def main(args):
     prior, conditionalProbabilities = trainBN(data, restrictedVocabulary)
     print "Naive Bayes Accuracy without Stop Words : ", testBN(args[2], restrictedVocabulary, prior, conditionalProbabilities)
     weights = trainMCAPLogisticRegression(data, restrictedVocabulary, iterations, eta, lamda)
-    print "Logistic Regression Accuracy with Stop Words : ", testMCAPLogisticRegression(args[2], weights)
+    print "Logistic Regression Accuracy without Stop Words : ", testMCAPLogisticRegression(args[2], weights)
     reducedVocabulary = featureSelection(data, vocabulary)
     prior, conditionalProbabilities = trainBN(data, reducedVocabulary)
     print "Naive Bayes Accuracy with Feature Selection : ", testBN(args[2], reducedVocabulary, prior, conditionalProbabilities)
@@ -254,7 +252,7 @@ if len(sys.argv) == numberOfArguments:
 else:
 	print "Invalid number of arguments found!"
 	print "Expected:"
-	print "python homework2.py <training-set-dir> <test-set-dir> <e> <l> <i> <k>"
+	print "python spam-ham-filter.py <training-set-dir> <test-set-dir> <e> <l> <i> <k>"
 	print "training-set-dir: The directory path containing folders titled 'ham' and 'spam' which contain the training data."
 	print "test-set-dir: The directory path containing folders titled 'ham' and 'spam' which contain the testing data."
 	print "e: eta value or the learning rate for Logistic Regression."
