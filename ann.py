@@ -7,9 +7,7 @@ from sklearn.neural_network import MLPClassifier
 import numpy as np
 
 """
-Homework 3 Submission.
 Author: Parag Pravin Dakle.
-NetID: pxd160530.
 Course: Advanced Machine Learning.
 """
 
@@ -228,7 +226,7 @@ if len(sys.argv) == numberOfArguments:
 else:
 	print "Invalid number of arguments found!"
 	print "Expected:"
-	print "python homework3.py <training-set-dir> <test-set-dir> <p_e> <p_i> <nn_e> <nn_i> <nn_hu> <nn_m>"
+	print "python ann.py <training-set-dir> <test-set-dir> <p_e> <p_i> <nn_e> <nn_i> <nn_hu> <nn_m>"
 	print "training-set-dir: The directory path containing folders titled 'ham' and 'spam' which contain the training data."
 	print "test-set-dir: The directory path containing folders titled 'ham' and 'spam' which contain the testing data."
 	print "p_e: eta value or the learning rate for Perceptron."
