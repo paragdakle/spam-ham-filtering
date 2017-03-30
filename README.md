@@ -8,7 +8,7 @@ A spam and ham filtering program using Naive Bayes, Logistic Regression and Neur
 Kindly execute the file using the following command:
 
 ```
-python homework2.py <training-set-dir> <test-set-dir> <e> <l> <i> <k>
+python spam-ham-filter.py <training-set-dir> <test-set-dir> <e> <l> <i> <k>
 ```
 
  where -   
@@ -21,7 +21,7 @@ python homework2.py <training-set-dir> <test-set-dir> <e> <l> <i> <k>
 
 ### Sample Execution:
 ```
-python homework2.py train/ test/ 0.05 1.3 100 1500
+python spam-ham-filter.py train/ test/ 0.05 1.3 100 1500
 ```
 
 ### Sample Output:
@@ -29,7 +29,7 @@ python homework2.py train/ test/ 0.05 1.3 100 1500
  Naive Bayes Accuracy with Stop Words :  94.769874477  
  Logistic Regression Accuracy with Stop Words :  93.9330543933  
  Naive Bayes Accuracy without Stop Words :  94.3514644351  
- Logistic Regression Accuracy with Stop Words :  95.8158995816  
+ Logistic Regression Accuracy without Stop Words :  95.8158995816  
  Naive Bayes Accuracy with Feature Selection :  92.050209205  
  Logistic Regression Accuracy with Feature Selection :  88.7029288703  
 
@@ -40,7 +40,7 @@ For Neural Networks - scikit-learn is used. No external script is needed to conv
 Kindly execute the file using the following command:
 
 ```
-python homework3.py <training-set-dir> <test-set-dir> <p_e> <p_i> <nn_e> <nn_i> <nn_hu> <nn_m>
+python ann.py <training-set-dir> <test-set-dir> <p_e> <p_i> <nn_e> <nn_i> <nn_hu> <nn_m>
 ```
 
  where-  
@@ -55,7 +55,7 @@ python homework3.py <training-set-dir> <test-set-dir> <p_e> <p_i> <nn_e> <nn_i> 
 
 Sample Execution:
 ```
-python homework3.py data_set1/train/ data_set1/test/ 0.1 200 0.1 100 5 0.1
+python ann.py data_set1/train/ data_set1/test/ 0.1 200 0.1 100 5 0.1
 
 Perceptron Accuracy :  91.6317991632
 Perceptron Accuracy without Stop Words :  90.7949790795
